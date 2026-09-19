@@ -158,8 +158,6 @@ projectButtons.forEach(button => {
                 </div>
             </div>
         </div>`;
-
-        modalBody.innerHTML = html
         }
 
         if(project == "weather") {
@@ -200,11 +198,50 @@ projectButtons.forEach(button => {
                 </div>
 
             </div>`;
-            modalBody.innerHTML = html;
         }
 
-         modal.classList.add("show");
+        if(project == 'key-pulse') {
+            html = `
+            <p class="eyebrow">PROJECT DETAILS</p>
+            <h2>Productivity Key Pulse</h2>
+            <p>A browser-based productivity tracker that monitors keyboard activity during a live session and provides real-time statistics about typing activity.</p>
 
+            <div class="modal-features">
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Track active session time
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Count total keystrokes
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Calculate typing speed in KPM
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Display the last key pressed
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Track frequently pressed keys
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Update statistics in real time
+                </div>
+            </div>
+            `; 
+        }
+
+            modalBody.innerHTML = html;
+            modal.classList.add("show");
     });
 
 });
